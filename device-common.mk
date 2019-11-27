@@ -305,9 +305,6 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0 \
     android.hardware.wifi@1.0-impl
 
-# Properties
--include $(LOCAL_PATH)/system_prop.mk
-
 # Apex
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
