@@ -337,6 +337,8 @@ vendor/lib64/libvndsecril-client.so|d2a5ac7bd37748659aa36dc9880dca4a8ea80353
 vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so|9a252e8f68669a51a477e5d5c58e87471faff260
 vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so|79295a294408976c751aaf0c05b120ecdcdbe095
 vendor/lib64/vendor.samsung.hardware.radio@2.0.so|ab8fc2a827261521e4d5899972d4773cc1314561
+# RIL - from G960FXXSBETH2
+vendor/bin/secril_config_svc|0c48e7ebcc2635c228ecbb37a290248849075f99
 
 # Sensors
 vendor/bin/hw/lhd
