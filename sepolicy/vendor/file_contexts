@@ -1,6 +1,5 @@
 ####################################
 # Devices
-/cpefs(/.*)?                u:object_r:efs_file:s0
 /dev/mali[0-9]*             u:object_r:gpu_device:s0
 /dev/umts_ipc0              u:object_r:radio_device:s0
 /dev/fimg2d                 u:object_r:video_device:s0
@@ -36,6 +35,8 @@
 
 ####################################
 # efs files
+/cpefs(/.*)?                   u:object_r:sec_efs_file:s0
+
 /efs/FactoryApp(/.*)?          u:object_r:app_efs_file:s0
 /efs/FactoryApp/baro_delta     u:object_r:baro_delta_factoryapp_efs_file:s0
 /efs/FactoryApp/factorymode    u:object_r:factorymode_factoryapp_efs_file:s0
