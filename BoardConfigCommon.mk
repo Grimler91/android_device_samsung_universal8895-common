@@ -150,8 +150,7 @@ include device/lineage/sepolicy/exynos/sepolicy.mk
 BOARD_SEPOLICY_TEE_FLAVOR        := mobicore
 include device/samsung_slsi/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
-BOARD_SEPOLICY_VERS := $(PLATFORM_SDK_VERSION).0
+BOARD_VENDOR_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/vendor
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
