@@ -192,7 +192,7 @@ on post-fs-data
     # give system access to wpa_supplicant.conf for backup and restore
     mkdir /data/misc/wifi 0770 wifi system
     mkdir /data/misc/wifi_share_profile 0771 wifi system
-    mkdir /data/misc/wifi_hostapd 0771 wifi system    
+    mkdir /data/misc/wifi_hostapd 0771 wifi system
 
     mkdir /data/log/wifi/ 0775 system root
     mkdir /data/misc/dhcp 0775 dhcp dhcp
@@ -207,15 +207,9 @@ on post-fs-data
     write /data/misc/conn/.wificable.info E
     chown system root /data/misc/conn/.wificable.info
     chmod 0666 /data/misc/conn/.wificable.info
-    
-# [ SEC_PRODUCT_FEATURE_SECURITY_SUPPORT_FIVE
-    mkdir /data/misc/integrity 0775 vendor_audit system
-# ] SEC_PRODUCT_FEATURE_SECURITY_SUPPORT_FIVE
-	
+
 # [ SEC_SELINUX_PORTING_COMMON
     mkdir /data/misc/audit 0775 system system
-    chown vendor_audit vendor_audit /data/misc/audit/audit.log
-    chown vendor_audit vendor_audit /data/misc/audit/audit.old
 
     # arcounter
     mkdir /data/misc/arcounter 0700 system system
@@ -231,16 +225,6 @@ on post-fs-data
 
     # create mediacodec folder
     mkdir /data/vendor/media 0770 mediacodec mediacodec
-
-    # Samsung Pay
-    # mkdir /efs/pfw_data 0760 spay spay
-
-    # Linux On Dex
-    mkdir /data/lxd 0770 root vendor_lod
-
-    # MST/NFC Switch
-    # chown spay system /dev/mst_ctrl
-    # chmod 0660 /dev/mst_ctrl
 
     # MST Factory Test
     chown system system /sys/class/mstldo/mst_drv/transmit
@@ -285,11 +269,11 @@ on post-fs-data
     mkdir /data/app_fonts 0775 system system
 
 # [ SEC_SELINUX_PORTING_COMMON
-    restorecon --recursive --force /efs
-    restorecon --recursive --force /cpefs
-    restorecon --recursive --force /mnt/vendor/efs
-    restorecon --recursive --force /mnt/vendor/cpefs
-    restorecon --recursive --force /sec_efs
+    restorecon --recursive /efs
+    restorecon --recursive /cpefs
+    restorecon --recursive /mnt/vendor/efs
+    restorecon --recursive /mnt/vendor/cpefs
+    restorecon --recursive /sec_efs
     restorecon_recursive /carrier
     restorecon /sys/kernel/debug/tracing/trace_marker
 # ] SEC_SELINUX_PORTING_COMMON
